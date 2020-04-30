@@ -21,6 +21,12 @@ namespace KR
             this.phone = phone;
         }
 
+        //Метод возвращающий сформированную строку из полей класса
+        public string FieldsToString()
+        {
+            return String.Format("Название организации: {0}, ФИО: {1}, Телефон: {2}", name, fullname, phone);
+        }
+
         //Метод возвращающий или устанавливающий название организации
         public string Name
         {

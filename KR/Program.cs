@@ -55,6 +55,7 @@ namespace KR
             }
 
             Console.WriteLine(result);
+            Console.WriteLine("\r\nПример работы методов формирующих строку из полей:\r\n\n" + requests[0].FieldsToString() + "\r\n\n" + orgs[0].FieldsToString() + "\r\n\n" + rooms[0].FieldsToString());
             Console.ReadKey();
         }
     }

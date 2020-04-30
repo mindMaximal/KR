@@ -18,6 +18,12 @@ namespace KR
             this.number = number;
         }
 
+        //Метод возвращающий сформированную строку из полей класса
+        public string FieldsToString()
+        {
+            return String.Format("Номер комнаты: {0}, Этаж: {1}", number, floor);
+        }
+
         //Метод возвращающий или устанавливающий номер этажа
         public int Floor
         {

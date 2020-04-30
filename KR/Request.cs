@@ -24,6 +24,12 @@ namespace KR
             this.count = count;
         }
 
+        //Метод возвращающий сформированную строку из полей класса
+        public string FieldsToString()
+        {
+            return String.Format("Комната: {0}, Организация: {1}, Дата прибытия: {2}, Дата убытия: {3}, Количество мест: {4}", room.Number, org.Name, dateArrival.ToShortDateString(), dateDeparture.ToShortDateString(), count);
+        }
+
         //Метод возвращающий или устанавливающий название организации
         public Room Room
         {
