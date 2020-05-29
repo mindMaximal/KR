@@ -46,16 +46,14 @@ namespace KR
             requests[4] = new Request(rooms[4], orgs[4], new DateTime(2020, 1, 7), new DateTime(2020, 1, 8), 2);
 
             //Выведем в консоль результат
-            result = "Комната\tЭтаж\tОрганизация\tФИО\t                Номер телефона\t        Дата прибытия\tДата убытия\tМест\r\n";
+            result = "Организации и информация:\r\n";
 
             for (int i = 0; i < requests.Length; i++)
             {
-                result += "\r\n";
-                result += String.Format("{0}\t{1}\t{2}\t{3, -20}\t{4}\t{5}\t{6}\t{7}", requests[i].Room.Number, requests[i].Room.Floor, requests[i].Organization.Name, requests[i].Organization.Fullname, requests[i].Organization.Phone, requests[i].Arrival.ToShortDateString(), requests[i].Departure.ToShortDateString(), requests[i].Count);
+                result += "\r\n" + requests[i].FieldsToString() + "\r\n";
             }
 
             Console.WriteLine(result);
-            Console.WriteLine("\r\nПример работы методов формирующих строку из полей:\r\n\n" + requests[0].FieldsToString() + "\r\n\n" + orgs[0].FieldsToString() + "\r\n\n" + rooms[0].FieldsToString());
             Console.ReadKey();
         }
     }

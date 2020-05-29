@@ -27,10 +27,10 @@ namespace KR
         //Метод возвращающий сформированную строку из полей класса
         public string FieldsToString()
         {
-            return String.Format("Комната: {0}, Организация: {1}, Дата прибытия: {2}, Дата убытия: {3}, Количество мест: {4}", room.Number, org.Name, dateArrival.ToShortDateString(), dateDeparture.ToShortDateString(), count);
+            return String.Format("{0},\r\n{1},\r\nДата прибытия: {2}, Дата убытия: {3}, Количество мест: {4}", room.FieldsToString(), org.FieldsToString(), dateArrival.ToShortDateString(), dateDeparture.ToShortDateString(), count);
         }
 
-        //Метод возвращающий или устанавливающий название организации
+        //Свойство возвращающее или устанавливающее название организации
         public Room Room
         {
             get
@@ -43,7 +43,7 @@ namespace KR
             }
         }
 
-        //Метод возвращающий или устанавливающий название организации
+        //Свойство возвращающее или устанавливающее название организации
         public Organization Organization
         {
             get
@@ -56,7 +56,7 @@ namespace KR
             }
         }
 
-        //Метод возвращающий или устанавливающий название организации
+        //Свойство возвращающее или устанавливающее название организации
         public DateTime Arrival
         {
             get
@@ -69,7 +69,7 @@ namespace KR
             }
         }
 
-        //Метод возвращающий или устанавливающий дату  убытия
+        //Свойство возвращающее или устанавливающее дату  убытия
         public DateTime Departure
         {
             get
@@ -82,7 +82,7 @@ namespace KR
             }
         }
 
-        //Метод возвращающий или устанавливающий количество мест
+        //Свойство возвращающее или устанавливающее количество мест
         public int Count
         {
             get
